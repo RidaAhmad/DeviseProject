@@ -5,10 +5,12 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.email %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -18,4 +20,13 @@
 
 <br />
 
+<!-- 
+
 <%= link_to 'New User', new_user_path %>
+
+<br />
+
+<br/>
+
+<%= link_to 'Change Password', edit_user_password_path %>
+ -->
